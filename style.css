@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    /* colors */
+    --primary: #181818e5;
+    --gray-light: rgba(128, 128, 128, 0.418);
+    --gray-normal: rgb(134, 129, 129);
+    --white: white;
+
+    /* Fonts */
+    --font: Arial, Helvetica, sans-serif;
+    --small-font: 17px;
+
+    /* margin and padding */
+    --margin: 1rem;
+    --padding: 2rem;
+}
+
+nav a {
+    list-style: none;
+    color: var(--gray-normal);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+
+}
+
+nav a:active {
+    transform: translateY(-0.5rem);
+}
+
+li:hover {
+    color: var(--white);
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    font-family: var(--font);
+    font-size: var(--small-font);
+    display: flex;
+    justify-content: space-between;
+    margin: var(--margin);
+    padding: var(--padding);
+    position: relative;
+    z-index: 10;
+}
+
+.nav-container{
+    display: flex;
+    cursor: pointer;
+
+}
+
+
+nav {
+    display: flex;
+    gap: 1rem;
+    letter-spacing: 0.2rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    transition: all 0.2s ease;
+}
+
+#sidebar-active{
+    display: none;
+}
+
+nav .open-sidebar-btn, nav .close-sidebar-btn{
+    padding: 0 20px;
+    display: none;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+
+
+.logo {
+    color: var(--white);
+    transform: scale(1.9) translate(1rem);
+    letter-spacing: 0.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* hero section */
+
+main .hero {
+    height: 100vh;
+    position: relative;
+    top: -9.2rem;
+    display: flex;
+}
+
+main .hero .hero-left {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    line-height: 2;
+    background-color: var(--gray-light);
+}
+
+main .hero .hero-left .hero-text {
+    font-family: var(--font);
+    letter-spacing: 0.1rem;
+    margin: 1rem;
+}
+
+main .hero .hero-left .hero-text p {
+    font-weight: bolder;
+    color: rgb(88, 86, 86);
+}
+
+main .hero .hero-left .hero-text .name {
+    font-size: 2rem;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Cursor */
+.cursor {
+    width: fit-content;
+    position: relative;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+/* Animation */
+.typewriter-animation {
+    animation:
+        typewriter 3s steps(50) 1s infinite,
+        blinkingCursor 500ms steps(50) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkingCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+
+
+
+
+
+
+/* .l1{
+    animation: name-animation 10s cubic-bezier(0, 0.26, 0, 1.4) 0s infinite alternate;
+}
+.l2{
+    animation: name-animation 10s cubic-bezier(0, 0.26, 0, 1.4) 1s infinite alternate;
+}
+.l3{
+    animation: name-animation 10s cubic-bezier(0, 0.26, 0, 1.4) 2s infinite alternate;
+}
+.l4{
+    animation: name-animation 10s cubic-bezier(0, 0.26, 0, 1.4) 3s infinite alternate;
+}
+.l5{
+    animation: name-animation 10s cubic-bezier(0, 0.26, 0, 1.4) 4s infinite alternate;
+} */
+
+/* @keyframes name-animation {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+} */
+
+main .hero .hero-left .hero-btn {
+    position: absolute;
+    top: 70vh;
+    display: flex;
+    gap: 2rem;
+}
+
+main .hero .hero-left .hero-btn .blck-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #181818;
+    padding: 0.7rem 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+
+}
+
+main .hero .hero-left .hero-btn .wht-btn {
+    text-decoration: none;
+    border: 1.5px solid black;
+    color: black;
+    padding: 0.7rem 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+
+}
+
+
+
+main .hero .hero-right {
+    background-image: url(Images/1736770044203.jpg);
+    background-size: cover;
+    background-position: top;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+main .hero .hero-right .get-cv a {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    text-decoration: none;
+    color: var(--white);
+    border: 2px solid white;
+    padding: 0.9rem 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+main .hero .hero-right .get-cv a::before {
+    content: "";
+    text-decoration: none;
+    color: var(--white);
+    border-bottom: 2px solid white;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: -80%;
+    top: -50%;
+
+}
+
+main .hero .hero-right .social-media {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    height: 70%;
+    width: 20%;
+}
+
+main .hero .hero-right .social-media i {
+    transform: scale(1.6);
+    width: max-content;
+}
+
+
